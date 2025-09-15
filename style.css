@@ -1,11 +1,21 @@
-body {
+body.gallery-mode {
     margin: 0;
     overflow: hidden;
     background: #0e1158ff;
-    cursor: none; /* we'll add a custom trace cursor */
+    cursor: none;
     min-width: 3500px;
     min-height: 3500px;
     overflow: auto;
+  }
+  
+  /* Glitch mode body (responsive) */
+  body.glitch-mode {
+    margin: 0;
+    background: #fff;
+    color: #000;
+    min-width: auto;
+    min-height: auto;
+    cursor: default;
   }
   
   #gallery img {
@@ -38,4 +48,76 @@ body {
     z-index: 2000; /* always on top */
   }
   
+  #top-bar {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 3000;
+  }
+  
+  #mode-switcher {
+    padding: 6px 12px;
+    border: 1px solid #000;
+    background: #fff;
+    cursor: pointer;
+  }
+  
+  #instruction {
+    margin-top: 12px;
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #000;
+  }
+  
+  /* Glitch grid mode */
+  #glitch-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 10px;
+    padding: 220px 20px 20px; /* leaves space for switcher/instruction */
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .glitch-cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding: 12px;
+    border: 1px solid #000;
+    transition: background 0.3s, color 0.3s;
+    min-height: 220px;
+    box-sizing: border-box;   /* ensures padding included */
+    overflow: hidden;         /* prevents spillover */
+  }
+  
+  .glitch-cell div {
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+  
+  .glitch-cell:hover {
+    background: #0e1158ff;
+    color: #fff;
+  }
+
+  .glitch-cell div {
+    word-wrap: break-word;       /* break long words */
+    overflow-wrap: break-word;   /* modern equivalent */
+    hyphens: auto;               /* enable hyphenation */
+  }
+  .glitch-cell img {
+    width: 100%;          /* fill the cell width */
+    height: auto;         /* keep aspect ratio */
+    max-height: 180px;    /* don’t let it get too tall */
+    object-fit: contain;  /* keep full image visible */
+    margin-bottom: 10px;
+  }
+
   

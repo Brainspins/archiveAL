@@ -6,7 +6,20 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div id="top-bar">
+    <button id="mode-switcher">Glitch Mode</button>
+    <div id="instruction" style="display:none;">
+        This archive listens. It mishears. It turns your voice into something you never said. Each cell is a fragment — image, text, and sound.
+        Move your cursor across the grid: words break, voices return, ads appear.
+        Errors are not mistakes here; they are exits, lines of flight, small escapes from control.
+        The makers of these mistakes are open-source AI systems: Stable Diffusion 1.5 for images, Whisper for transcription, ControlNet for conditioning, and a UTF-8 decoder for text.
+        The archive preserves outputs — transcripts, ads, and audio — as records of how machines mishear and misinterpret us and our environment.
+    </div>
+  </div>
+
   <div id="gallery"></div>
+  <div id="glitch-grid" style="display:none;"></div>
+
   <script src="script.js"></script>
 </body>
 </html>
