@@ -12,7 +12,7 @@ body.gallery-mode {
   body.glitch-mode {
     margin: 0;
     background: #fff;
-    color: #000;
+    color: #0e1158ff;
     min-width: auto;
     min-height: auto;
     cursor: default;
@@ -59,16 +59,19 @@ body.gallery-mode {
   
   #mode-switcher {
     padding: 6px 12px;
-    border: 1px solid #000;
+    border: 1px solid #0e1158ff;
     background: #fff;
     cursor: pointer;
   }
   
   #instruction {
-    margin-top: 12px;
-    font-family: sans-serif;
+    margin: 70px 20px 20px;   /* push it below the button */
+    max-width: auto;
+    text-align: left;
+    line-height: 1;
     font-size: 14px;
-    color: #000;
+    font-family: sans-serif;
+    color: #0e1158ff;
   }
   
   /* Glitch grid mode */
@@ -76,7 +79,7 @@ body.gallery-mode {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 10px;
-    padding: 220px 20px 20px; /* leaves space for switcher/instruction */
+    padding: 20px 20px 20px; /* leaves space for switcher/instruction */
     width: 100%;
     box-sizing: border-box;
   }
@@ -88,7 +91,7 @@ body.gallery-mode {
     align-items: center;
     text-align: center;
     padding: 12px;
-    border: 1px solid #000;
+    border: 1px solid #0e1158ff;
     transition: background 0.3s, color 0.3s;
     min-height: 220px;
     box-sizing: border-box;   /* ensures padding included */
